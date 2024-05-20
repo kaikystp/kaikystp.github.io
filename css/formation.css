@@ -1,0 +1,181 @@
+.form {
+  grid-template-columns: 2fr 1fr;
+  background-color: #eeeeee;
+  color: #000;
+}
+
+.form .subtitle {
+  color: #a1a1a1;
+}
+
+.form-text {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 50ch;
+  margin-bottom: 4rem;
+}
+
+.school-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6rem;
+  margin-bottom: 4rem;
+  justify-content: space-around;
+  margin-right: 6rem;
+}
+
+.school {
+  background-color: #cdcdcd;
+  padding: 1.5rem;
+  border-radius: 4px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.school-type {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #3e3e3e;
+  margin-bottom: 10px;
+}
+
+.school-course {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.school-course::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background-image: linear-gradient(#76277a, #442454);
+  position: absolute;
+  left: -28px;
+}
+
+.school-name {
+  font-size: 1.125rem;
+  color: #3e3e3e;
+}
+
+.logo-iff {
+  max-width: 80px;
+  max-height: 24px;
+}
+
+.school div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form .subtitle {
+  align-self: center;
+  justify-self: end;
+  color: #e1e1e1;
+}
+
+.courses {
+  margin-bottom: 4rem;
+  margin-left: 2.5rem;
+}
+
+.language {
+  margin-left: 2.5rem;
+}
+
+.form-extra h3 {
+  font-weight: 900;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #838383;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.form-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+li span {
+  color: #838383;
+}
+
+.form-extra h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -40px;
+  top: -4px;
+}
+
+.courses h3::before {
+  background: url("/img/cursos.svg") no-repeat center center;
+}
+
+.language h3::before {
+  background: url("/img/idiomas.svg") no-repeat center center;
+}
+
+@media (max-width: 1000px) {
+  .school-list {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo-iff {
+    display: none;
+  }
+
+  .school-name {
+    text-align: start;
+  }
+
+  .school div {
+    display: inline-block;
+    justify-content: start;
+    align-content: end;
+  }
+
+  .school-list {
+    gap: 4rem;
+    flex: 1;
+  }
+  .form .subtitle {
+    font-size: 6rem;
+    color: #000;
+    justify-self: center;
+  }
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .form-text {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .form div {
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    gap: 2rem;
+  }
+
+  .form .subtitle {
+    display: none;
+  }
+}
